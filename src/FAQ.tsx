@@ -1,6 +1,6 @@
 //@ts-nocheck
 import React from 'react';
-import {StyleSheet} from 'react-native';
+import {StyleSheet, View} from 'react-native';
 import {Icon, Panel, PanelGroup} from 'rsuite';
 import 'rsuite/dist/styles/rsuite-default.css';
 
@@ -30,12 +30,12 @@ const faqV = (props: FaqVProps) => {
   };
 
   return (
-    <div style={StyleSheet.flatten([props?.containerStyle])}>
+    <View style={StyleSheet.flatten([props?.containerStyle])}>
         <h3 style={StyleSheet.flatten([props?.headingStyle])}>{props?.faqData?.heading}</h3>
     <PanelGroup accordion={props?.accordion} bordered={props?.bordered} defaultActiveKey={props?.faqData?.defaultActiveKey} >
       {getFaq()}
     </PanelGroup>
-    </div>
+    </View>
   );
 };
 
